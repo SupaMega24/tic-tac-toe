@@ -7,9 +7,6 @@ const Square = ({value, onSquareClick}) => {
     {value}
   </button>
 }
-  
-  
-
 
 export default function Board() {
   const [xIsnext, setXIsNext] = useState(true);
@@ -28,20 +25,25 @@ export default function Board() {
     
     setSquares(nextSquares);
     setXIsNext(!xIsnext);
-  }
+  }  
 
   const winner = calculateWinner(squares);
+  const isDraw = squares.every((square) => square !== null);
+
   let status;
   if (winner) {
     status = "The winner is: " + winner;
+  }  
+  else if (isDraw) {
+    status = "It's a draw!";
   }
   else {
     status = "It's your turn: " + (xIsnext ? 'X' : 'O');
-  }
+  }  
 
   return (
     <>
-      <div className="status">{status}</div>
+      <div className="status">Tic Tac Toe</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -57,6 +59,7 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
+      <div className="status">{status}</div>      
     </>
   );
 }
