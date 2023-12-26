@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.81491a2d.css",
+    "main.js": "/static/js/main.adbf6fd9.js",
+    "static/media/valley.png": "/static/media/valley.d08ace8b779460c71f87.png",
+    "index.html": "/index.html",
+    "main.81491a2d.css.map": "/static/css/main.81491a2d.css.map",
+    "main.adbf6fd9.js.map": "/static/js/main.adbf6fd9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81491a2d.css",
+    "static/js/main.adbf6fd9.js"
+  ]
+}
